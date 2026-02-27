@@ -11,12 +11,20 @@ public class CloudVendorController {
 
     CloudVendorService cloudVendorService;
 
+    /**
+     *
+     * @param cloudVendorService
+     */
     public CloudVendorController(CloudVendorService cloudVendorService) {
         this.cloudVendorService = cloudVendorService;
     }
 
 
-
+    /**
+     *
+     * @param vendorId
+     * @return
+     */
     @GetMapping("{vendorId}")
     public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
         return cloudVendorService.getCloudVendor(vendorId);
