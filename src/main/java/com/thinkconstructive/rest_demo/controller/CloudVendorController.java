@@ -1,6 +1,6 @@
 package com.thinkconstructive.rest_demo.controller;
 
-import com.thinkconstructive.rest_demo.Model.CloudVendor;
+import  com.thinkconstructive.rest_demo.Model.CloudVendor;
 import com.thinkconstructive.rest_demo.service.CloudVendorService;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
@@ -11,29 +11,18 @@ public class CloudVendorController {
 
     CloudVendorService cloudVendorService;
 
-    /**
-     *
-     * @param cloudVendorService
-     */
     public CloudVendorController(CloudVendorService cloudVendorService) {
         this.cloudVendorService = cloudVendorService;
     }
 
 
-    /**
-     *
-     * @param vendorId
-     * @return
-     */
+
     @GetMapping("{vendorId}")
     public CloudVendor getCloudVendorDetails(@PathVariable("vendorId") String vendorId){
         return cloudVendorService.getCloudVendor(vendorId);
     }
 
-    @GetMapping("{vendorId}")
-    public CloudVendor getCloudVendorDetails1(@PathVariable("vendorId") String vendorId){
-        return cloudVendorService.getCloudVendor(vendorId);
-    }
+
 
     @GetMapping()
     public List<CloudVendor> getAllCloudVendorDetails(){
