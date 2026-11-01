@@ -55,4 +55,6 @@ public class CloudVendor {
         this.vendorPhoneNumber = vendorPhoneNumber;
     }
 
+
+    // testing git commands for learning purpose
 }
